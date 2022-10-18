@@ -20,7 +20,7 @@ fn main() {
 
     let mut completed_threads = 0;
     for handle in handles {
-        handle.join();       
+        handle.join().unwrap();       
         completed_threads += 1;
     }
 
